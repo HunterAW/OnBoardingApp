@@ -19,7 +19,7 @@ namespace OnBoardingApp
 
             if (signInResponse == "n")
             {
-                Console.WriteLine("Thanks for stopping by! I bet you don't even have any Awesome to store anyway.\nGood ridence to Awesomeless rubish.");
+                Console.WriteLine("Thanks for stopping by! I bet you don't even have any Awesome to store anyway.\nGood riddance to Awesomeless rubish.");
                 Console.ReadLine();
                 Environment.Exit(0);
             }
@@ -38,28 +38,28 @@ namespace OnBoardingApp
                 }
             }
 
-            Console.WriteLine("Time to assign a pin to your account so that noone will try and swipe your Awesome.\nPlease enter a 4 charictor pin.");
+            Console.WriteLine("Time to assign a pin to your account so that no one will try and swipe your Awesome.\nPlease enter a 4 character pin.");
             user.Pin = Console.ReadLine();
 
             while (user.Pin.Length != 4)
             {
-                Console.WriteLine($"4 Charicters not {user.Pin.Length} Charicters...\nTry again...");
+                Console.WriteLine($"4 characters not {user.Pin.Length}...\nTry again...");
                 user.Pin = Console.ReadLine();
             }
 
             Console.WriteLine("Thank you for setting up an Account with Hunter's Bank of Awesome!\nHow much awesome would you like to deposite today?");
 
             user.Awesome = 0;
-            while(user.Awesome == 0)
-            try
-            {
-                user.Awesome = float.Parse(Console.ReadLine());
-            }
+            while (user.Awesome == 0)
+                try
+                {
+                    user.Awesome = float.Parse(Console.ReadLine());
+                }
 
-            catch
-            {
-                Console.WriteLine("Please state the numerical value of how much Awesome you would like to deposite.");
-                user.Awesome = float.Parse(Console.ReadLine());
+                catch
+                {
+                    Console.WriteLine("Please state the numerical value of how much Awesome you would like to deposite.");
+                    user.Awesome = float.Parse(Console.ReadLine());
                 }
 
             if (user.Awesome < 10)
@@ -74,11 +74,8 @@ namespace OnBoardingApp
 
             if (user.Awesome >= 100)
             {
-                Console.WriteLine($"Wow {user.Awesome} Awesome! Please come again and grace us with your presence!");
+                Console.WriteLine($"Wow {user.Awesome} Awesome! Please come again and grace us with your presence in the future!");
             }
-            Console.WriteLine("end test");
-
-
 
             Console.ReadLine();
         }

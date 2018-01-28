@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnBoardingApp
 {
@@ -31,11 +25,11 @@ namespace OnBoardingApp
 
             if (signInResponse == "y")
             {
-                Console.WriteLine();    
+                Console.WriteLine();
                 {
                     Console.WriteLine("Fantastic! Let's get started!\nPlease enter your first name.");
                     user.FirstName = Console.ReadLine();
-                    
+
                     Console.WriteLine("That is a great name!\nPlease enter your last name.");
                     user.LastName = Console.ReadLine();
 
@@ -43,13 +37,33 @@ namespace OnBoardingApp
                 }
             }
 
-            Console.WriteLine("Time to assign a pin to your account so that noone will try and swipe your Awesome.\nPlease enter a four charictor pin.");
+            Console.WriteLine("Time to assign a pin to your account so that noone will try and swipe your Awesome.\nPlease enter a 4 charictor pin.");
             user.Pin = Console.ReadLine();
 
-            while(user.Pin.Length != 4)
+            while (user.Pin.Length != 4)
             {
-                Console.WriteLine($"Four Charictors not {user.Pin.Length}...\nTry again...");
+                Console.WriteLine($"4 Charicters not {user.Pin.Length} Charicters...\nTry again...");
                 user.Pin = Console.ReadLine();
+            }
+
+            Console.WriteLine("Thank you for setting up an Account with Hunter's Bank of Awesome!\nHow much awesome would you like to deposite today?");
+
+            user.Awesome = 0;
+            while(user.Awesome == 0)
+            try
+            {
+                user.Awesome = float.Parse(Console.ReadLine());
+            }
+
+            catch
+            {
+                Console.WriteLine("Please state the numerical value of how much Awesome you would like to deposite.");
+                user.Awesome = float.Parse(Console.ReadLine());
+                }
+
+            if (user.Awesome < 10)
+            {
+
             }
             Console.WriteLine("end test");
 

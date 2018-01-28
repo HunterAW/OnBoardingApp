@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace OnBoardingApp
 {
     public class User
@@ -11,6 +6,7 @@ namespace OnBoardingApp
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Pin { get; set; }
+        public float Awesome { get; set; }
 
     }
 }

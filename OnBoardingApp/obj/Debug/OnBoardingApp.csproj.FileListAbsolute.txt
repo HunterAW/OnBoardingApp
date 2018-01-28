@@ -1,0 +1,7 @@
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\bin\Debug\OnBoardingApp.exe.config
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\bin\Debug\OnBoardingApp.exe
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\bin\Debug\OnBoardingApp.pdb
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\obj\Debug\OnBoardingApp.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\obj\Debug\OnBoardingApp.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\obj\Debug\OnBoardingApp.exe
+C:\Users\ASUS\source\repos\OnBoardingApp\OnBoardingApp\obj\Debug\OnBoardingApp.pdb

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace OnBoardingApp
 {
@@ -9,7 +8,7 @@ namespace OnBoardingApp
         {
             Console.WriteLine("Welcome to Hunter's Bank of Awesome, where we strive to be the leader in the storing of Awesome.\nWould you like to create an account? | y/n");
             var signInResponse = Console.ReadLine();
-            User user = new User();
+
 
             while (signInResponse != "y" && signInResponse != "n")
             {
@@ -23,12 +22,13 @@ namespace OnBoardingApp
                 Console.ReadLine();
                 Environment.Exit(0);
             }
+            User user = new User();
 
             if (signInResponse == "y")
             {
                 Console.WriteLine();
                 {
-                    Console.WriteLine("Fantastic! Let's get started!\nPlease enter your first name.");
+                    Console.WriteLine("Fantastic! Let's get started!\nPlease enter your first name.");  //reminder: move the naming outside of this if statement
                     user.FirstName = Console.ReadLine();
 
                     Console.WriteLine("That is a great name!\nPlease enter your last name.");
@@ -59,17 +59,22 @@ namespace OnBoardingApp
                 catch
                 {
                     Console.WriteLine("Please state the numerical value of how much Awesome you would like to deposite.");
-                    user.Awesome = float.Parse(Console.ReadLine());
                 }
 
+            if (user.Awesome < 0)
+            {
+                Console.WriteLine("Your account has been overdrawn and you are no longer awesome.\nGoodbye!");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
             if (user.Awesome < 10)
             {
-                Console.WriteLine($"Well... {user.Awesome} isn't zero Awesome, that's something at least. Thanks for using Hunter's Bank of Awesome.");
+                Console.WriteLine($"Well... {user.Awesome} isn't zero Awesome, that's something at least. Thank you for using Hunter's Bank of Awesome.");
             }
 
             if (user.Awesome >= 10 && user.Awesome < 100)
             {
-                Console.WriteLine($"Thank you for depositing {user.Awesome} Awesome Please come again.");
+                Console.WriteLine($"Thank you for depositing {user.Awesome} Awesome. Please come again.");
             }
 
             if (user.Awesome >= 100)

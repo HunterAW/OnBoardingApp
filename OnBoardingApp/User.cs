@@ -10,7 +10,7 @@ namespace OnBoardingApp
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Pin { get; set; }
+        public string Pin { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace OnBoardingApp
 {
@@ -63,7 +64,17 @@ namespace OnBoardingApp
 
             if (user.Awesome < 10)
             {
+                Console.WriteLine($"Well... {user.Awesome} isn't zero Awesome, that's something at least. Thanks for using Hunter's Bank of Awesome.");
+            }
 
+            if (user.Awesome >= 10 && user.Awesome < 100)
+            {
+                Console.WriteLine($"Thank you for depositing {user.Awesome} Awesome Please come again.");
+            }
+
+            if (user.Awesome >= 100)
+            {
+                Console.WriteLine($"Wow {user.Awesome} Awesome! Please come again and grace us with your presence!");
             }
             Console.WriteLine("end test");
 

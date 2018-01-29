@@ -24,19 +24,14 @@ namespace OnBoardingApp
             }
             User user = new User();
 
-            if (signInResponse == "y")
-            {
-                Console.WriteLine();
-                {
-                    Console.WriteLine("Fantastic! Let's get started!\nPlease enter your first name.");  //reminder: move the naming outside of this if statement
-                    user.FirstName = Console.ReadLine();
+            Console.WriteLine("Fantastic! Let's get started!\nPlease enter your first name.");
+            user.FirstName = Console.ReadLine();
 
-                    Console.WriteLine("That is a great name!\nPlease enter your last name.");
-                    user.LastName = Console.ReadLine();
+            Console.WriteLine("That is a great name!\nPlease enter your last name.");
+            user.LastName = Console.ReadLine();
 
-                    Console.WriteLine($"Welcome to Hunter's Bank of Awesome {user.FirstName} {user.LastName}!");
-                }
-            }
+            Console.WriteLine($"Welcome to Hunter's Bank of Awesome {user.FirstName} {user.LastName}!");
+
 
             Console.WriteLine("Time to assign a pin to your account so that no one will try and swipe your Awesome.\nPlease enter a 4 character pin.");
             user.Pin = Console.ReadLine();
@@ -69,7 +64,7 @@ namespace OnBoardingApp
             }
             if (user.Awesome < 10)
             {
-                Console.WriteLine($"Well... {user.Awesome} isn't zero Awesome, that's something at least. Thank you for using Hunter's Bank of Awesome.");
+                Console.WriteLine($"Well... At least {user.Awesome} isn't zero Awesome, so things could be worse. Thank you for using Hunter's Bank of Awesome I guess.");
             }
 
             if (user.Awesome >= 10 && user.Awesome < 100)
